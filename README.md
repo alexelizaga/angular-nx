@@ -23,3 +23,11 @@ nx g @nx/nest:app my-nest-app
 ```
 docker-compose up -d
 ```
+
+# Scripts
+
+Crear archivo .env
+
+```
+node ./scripts/set-envs.js
+```
