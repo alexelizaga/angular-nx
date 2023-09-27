@@ -20,7 +20,7 @@ const routes: Routes = [
       { path: 'user-info', component: UserInfoPageComponent },
       { path: 'user-15', component: User15PageComponent },
       { path: 'user-16', component: User16PageComponent },
-      { path: '**', redirectTo: 'counter' },
+      { path: '**', redirectTo: 'counter-15' },
     ],
   },
 ];
