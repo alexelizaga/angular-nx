@@ -34,10 +34,10 @@ export class User15PageComponent implements OnInit {
     this.usersService
       .loadPage(page)
       .pipe(filter((users) => users.length > 0))
-      .subscribe((users) => {
-        console.log(users);
+      .subscribe((newUsers) => {
+        console.log(newUsers);
         this._currentPage = page;
-        this._users = [...this.users, ...users];
+        this._users = [...this.users, ...newUsers];
       });
   }
 }
