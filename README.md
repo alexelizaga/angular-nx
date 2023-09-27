@@ -17,3 +17,9 @@ Añadir otra aplicación de angular
 ```
 nx g @nx/nest:app my-nest-app
 ```
+
+# Docker
+
+```
+docker-compose up -d
+```
