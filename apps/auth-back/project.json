@@ -1,7 +1,7 @@
 {
-  "name": "auth",
+  "name": "auth-back",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/auth/src",
+  "sourceRoot": "apps/auth-back/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -11,12 +11,12 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/auth",
-        "main": "apps/auth/src/main.ts",
-        "tsConfig": "apps/auth/tsconfig.app.json",
-        "assets": ["apps/auth/src/assets"],
+        "outputPath": "dist/apps/auth-back",
+        "main": "apps/auth-back/src/main.ts",
+        "tsConfig": "apps/auth-back/tsconfig.app.json",
+        "assets": ["apps/auth-back/src/assets"],
         "isolatedConfig": true,
-        "webpackConfig": "apps/auth/webpack.config.js"
+        "webpackConfig": "apps/auth-back/webpack.config.js"
       },
       "configurations": {
         "development": {},
@@ -27,14 +27,14 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "auth:build"
+        "buildTarget": "auth-back:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "auth:build:development"
+          "buildTarget": "auth-back:build:development"
         },
         "production": {
-          "buildTarget": "auth:build:production"
+          "buildTarget": "auth-back:build:production"
         }
       }
     },
@@ -42,14 +42,14 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/auth/**/*.ts"]
+        "lintFilePatterns": ["apps/auth-back/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/auth/jest.config.ts",
+        "jestConfig": "apps/auth-back/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
