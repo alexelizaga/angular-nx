@@ -12,7 +12,7 @@ Instalar plugin de nest
 yarn add -D @nx/nest
 ```
 
-Añadir otra aplicación de angular
+Añadir otra aplicación
 
 ```
 nx g @nx/nest:app my-nest-app
@@ -22,4 +22,12 @@ nx g @nx/nest:app my-nest-app
 
 ```
 docker-compose up -d
+```
+
+# Scripts
+
+Crear archivo .env
+
+```
+node ./scripts/set-envs.js
 ```
